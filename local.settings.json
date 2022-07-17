@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "CLOUDKARAFKA_BROKERS": "srv1.srvs.cloudkafka.com:9094, srv2.srvs.cloudkafka.com:9094, srv3.srvs.cloudkafka.com:9094",
+    "CLOUDKARAFKA_USERNAME": "username",
+    "CLOUDKARAFKA_PASSWORD": "password",
+    "CLOUDKARAFKA_TOPIC": "topicname",
+    "API_COLUMNNAME": "vehicles",
+    "BUS_API_URL": "https://ckan2.multimediagdansk.pl/gpsPositions?v=2"
+  }
+}
