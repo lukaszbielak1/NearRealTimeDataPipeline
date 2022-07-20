@@ -1,15 +1,15 @@
 WITH CTE AS (
   SELECT
-    routeShortName,
+    vehicleCode,
     MAX(generated) as generated
   FROM
     bus_monitor
   group by
-    routeShortName
+    vehicleCode
 )
 SELECT
   bus.generated,
-  headsign,
+  bus.headsign,
   bus.routeShortName,
   concat(bus.routeShortName, "-",bus.headsign) as Name,
   lat,
@@ -17,4 +17,4 @@ SELECT
 FROM
   bus_monitor bus
   INNER JOIN CTE cte ON bus.generated = cte.generated 
-                     AND bus.routeShortName = cte.routeShortName
+                     AND bus.vehicleCode = cte.vehicleCode
